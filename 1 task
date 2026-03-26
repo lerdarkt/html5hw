@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления Нетологии</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стили из задания */
+        .courses-list {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .courses-list-item {
+            margin-top: 50px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .course {
+            padding: 20px 45px;
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/courses/img/presentation.jpg);
+            background-color: #6d6c69;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-label {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .courses-hint {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-container">
+            <span class="hero-label">Получите востребованную интернет-профессию в университете Нетология</span>
+            <div class="courses">
+                <span class="courses-hint">Выберите направление:</span>
+                <ul class="courses-list">
+                    <li class="courses-list-item"><a href="#0" class="course">Маркетинг</a></li>
+                    <li class="courses-list-item"><a href="#0" class="course">Бизнес и управление</a></li>
+                    <li class="courses-list-item"><a href="#0" class="course">Дизайн</a></li>
+                    <li class="courses-list-item"><a href="#0" class="course">Программирование</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
