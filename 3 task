@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поле поиска — Нетология</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .page {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .search-hint {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .search-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Стили из задания */
+        .field {
+            box-sizing: border-box;
+            width: 485px;
+            border: 2px solid #dadada;
+            padding: 10px 25px 10px 65px;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            height: 55px;
+            border-radius: 25px;
+            background-color: #ffffff;
+            background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/search-field/img/search.svg);
+            background-repeat: no-repeat;
+            background-position: left 20px center;
+            background-size: 25px;
+        }
+
+        .field:focus {
+            outline: none;
+            border-color: #9b59b6;
+        }
+
+        .button {
+            height: 55px;
+            padding: 0 30px;
+            border-radius: 25px;
+            border: none;
+            background-color: #9b59b6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <form class="search">
+            <span class="search-hint">Не можете что-то найти? Используйте поиск!</span>
+            <label class="search-group">
+                <input class="field" name="query" placeholder="Например, Iphone X" required>
+                <button class="button">Найти</button>
+            </label>
+        </form>
+    </div>
+</body>
+</html>
