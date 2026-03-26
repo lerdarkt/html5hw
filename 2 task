@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор города — Нетология</title>
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .page {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .select-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* Стили из задания для селекта */
+        .select {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 38px;
+            padding-left: 10px;
+            padding-right: 25px;
+            margin: 0;
+            border: 1px solid #cbd1d4;
+            background-color: #f9f9f9;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/city-select/img/select-arrows.svg);
+            background-repeat: no-repeat;
+            background-position: right 5px center;
+        }
+
+        .select:focus {
+            outline: 2px solid #0f8fee;
+        }
+
+        /* Стили из задания для чекбокса */
+        .checkbox {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .checkbox-text {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .checkbox-text::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/city-select/img/checkbox-unchecked.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .checkbox:checked + .checkbox-text::before {
+            background-image: url(https://netology-code.github.io/html-2-homeworks/form-elements/city-select/img/checkbox-checked.svg);
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <form class="form">
+            <div class="form-group">
+                <label class="select-group">
+                    <span class="select-label">Выберите свой город</span>
+                    <select class="select">
+                        <option value="moscow" selected>Москва</option>
+                        <option value="st-petersburg">Санкт-Петербург</option>
+                        <option value="kazan">Казань</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-group">
+                    <input type="checkbox" class="checkbox" required>
+                    <span class="checkbox-text">Вы согласны на обработку персональных данных</span>
+                </label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
